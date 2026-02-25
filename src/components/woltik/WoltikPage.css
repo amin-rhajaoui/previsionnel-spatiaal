@@ -1,0 +1,775 @@
+/* ============================================
+   WOLTIK PAGE — LAYOUT
+   ============================================ */
+.woltik-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ============================================
+   SHARED
+   ============================================ */
+.wk-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.wk-hero {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.wk-hero-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.wk-hero-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-xs);
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wk-hero-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.wk-hero-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.wk-hero-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 1.25rem;
+}
+
+.wk-hero-metrics {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.wk-hero-metric {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.15rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.wk-hero-metric-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wk-hero-metric-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  display: block;
+}
+
+.wk-hero-metric-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-hero-metric-value small {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 0.1rem;
+}
+
+.wk-hero-metric-detail {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+/* ============================================
+   FORECAST
+   ============================================ */
+.wk-forecast {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.wk-scenario-pills {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.wk-pill {
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.wk-pill:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.wk-pill-active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.wk-pill-active:hover {
+  background: #5558e6;
+  border-color: #5558e6;
+  color: white;
+}
+
+/* Forecast cards */
+.wk-forecast-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.wk-fcard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.wk-fcard-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wk-fcard-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.wk-fcard-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.wk-fcard-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Chart */
+.wk-chart {
+  margin-bottom: 1.5rem;
+}
+
+.wk-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 200px;
+  padding: 0 0.5rem;
+}
+
+.wk-chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.wk-chart-bar-wrap {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.wk-chart-bar-stack {
+  width: 70%;
+  max-width: 60px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.wk-chart-bar-mrr {
+  background: linear-gradient(180deg, #6366f1, #818cf8);
+}
+
+.wk-chart-bar-setup {
+  background: linear-gradient(180deg, #a855f7, #c084fc);
+}
+
+.wk-chart-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.wk-chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.wk-chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.wk-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.wk-legend-mrr { background: #6366f1; }
+.wk-legend-setup { background: #a855f7; }
+
+/* ============================================
+   SHARED TABLE
+   ============================================ */
+.wk-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.wk-table-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.wk-table-wrap::-webkit-scrollbar-track {
+  background: var(--bg-card);
+}
+
+.wk-table-wrap::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 3px;
+}
+
+.wk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.wk-table th {
+  background: var(--surface);
+  font-weight: 600;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 0.65rem 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.wk-table th:first-child {
+  text-align: left;
+}
+
+.wk-table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+.wk-td-label {
+  text-align: left !important;
+  font-weight: 600;
+  color: var(--text) !important;
+}
+
+.wk-td-name {
+  text-align: left !important;
+  font-weight: 500;
+  color: var(--text) !important;
+  white-space: nowrap;
+}
+
+.wk-td-sector {
+  white-space: nowrap;
+  font-size: 0.72rem;
+}
+
+.wk-td-tools {
+  font-size: 0.72rem;
+  color: var(--text-muted) !important;
+  white-space: nowrap;
+}
+
+.wk-td-rank {
+  color: var(--text-muted) !important;
+  font-weight: 600;
+  width: 40px;
+}
+
+.wk-td-highlight {
+  font-weight: 600;
+  color: var(--text) !important;
+}
+
+.wk-td-total {
+  font-weight: 700;
+  color: var(--primary) !important;
+}
+
+.wk-table-totals td {
+  background: var(--surface) !important;
+  font-weight: 700 !important;
+  color: var(--text) !important;
+  border-top: 2px solid var(--border);
+  border-bottom: none;
+}
+
+.wk-td-grand {
+  color: var(--primary) !important;
+  font-weight: 800 !important;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   PRICING
+   ============================================ */
+.wk-pricing {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.wk-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.wk-price-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: all 0.25s;
+}
+
+.wk-price-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--surface-3);
+}
+
+.wk-price-card-rec {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.wk-price-card-rec:hover {
+  border-color: var(--primary);
+}
+
+.wk-price-badge {
+  position: absolute;
+  top: -10px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.wk-price-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.wk-price-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.wk-price-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-price-amount small {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 0.15rem;
+}
+
+.wk-price-features {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+}
+
+.wk-price-features li {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.wk-price-features li:last-child {
+  border-bottom: none;
+}
+
+.wk-price-features li::before {
+  content: '✓ ';
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+/* ============================================
+   DELEGATAIRES
+   ============================================ */
+.wk-delegataires {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.wk-deleg-intro {
+  margin-bottom: 1.25rem;
+}
+
+.wk-deleg-intro p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.wk-deleg-intro strong {
+  color: var(--text);
+}
+
+.wk-deleg-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.wk-deleg-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.15rem;
+  flex: 1;
+  min-width: 180px;
+}
+
+.wk-deleg-stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wk-deleg-stat-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-deleg-stat-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  display: block;
+}
+
+.wk-table-deleg th:first-child {
+  text-align: center;
+  width: 40px;
+}
+
+/* ============================================
+   ADVANTAGES
+   ============================================ */
+.wk-advantages {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.wk-adv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.wk-adv-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  transition: all 0.25s;
+}
+
+.wk-adv-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--surface-3);
+}
+
+.wk-adv-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  background: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.wk-adv-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.wk-adv-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+}
+
+.wk-adv-vs {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.wk-adv-vs-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.wk-adv-vs-text {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+@media (max-width: 1200px) {
+  .wk-forecast-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wk-pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wk-adv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .wk-hero {
+    padding: 1rem;
+  }
+
+  .wk-hero-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .wk-hero-title {
+    font-size: 1rem;
+  }
+
+  .wk-hero-metrics {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .wk-hero-metric {
+    min-width: auto;
+  }
+
+  .wk-forecast,
+  .wk-pricing,
+  .wk-delegataires,
+  .wk-advantages {
+    padding: 1rem;
+  }
+
+  .wk-forecast-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .wk-chart-bars {
+    height: 160px;
+    gap: 0.35rem;
+  }
+
+  .wk-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wk-adv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wk-deleg-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .wk-deleg-stat {
+    min-width: auto;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE
+   ============================================ */
+@media (max-width: 480px) {
+  .wk-forecast-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .wk-scenario-pills {
+    flex-wrap: wrap;
+  }
+
+  .wk-hero-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .wk-hero-title {
+    font-size: 0.9rem;
+  }
+}

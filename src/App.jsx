@@ -1,14 +1,18 @@
 import { useState, useRef, useCallback, useMemo } from 'react'
 import { CATEGORIES, MOIS } from './data/expenses'
 import { OPTION_SETS } from './data/options'
+import useTheme from './hooks/useTheme'
 import Header from './components/Header'
 import SummaryCards from './components/SummaryCards'
 import DashboardPoleReno from './components/DashboardPoleReno'
 import MonthlyTable from './components/MonthlyTable'
 import AnnualTable from './components/AnnualTable'
+import WoltikPage from './components/woltik/WoltikPage'
 import './App.css'
 
 function App() {
+  const { theme, toggleTheme } = useTheme()
+  const [currentPage, setCurrentPage] = useState('charges')
   const [activeOptions, setActiveOptions] = useState(() => {
     const init = {}
     OPTION_SETS.forEach(os => { init[os.id] = os.defaultOption })
@@ -254,43 +258,53 @@ function App() {
         setShowAnnuel={setShowAnnuel}
         onExportCSV={handleExportCSV}
         onExportPDF={handleExportPDF}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
 
       <main className="main">
-        <SummaryCards
-          totalGeneral={getTotalGeneral()}
-          totalHorsRemun={getTotalHorsRemuneration()}
-          data={data}
-          formatMontant={formatMontant}
-          activeOptions={activeOptions}
-          toggleOption={toggleOption}
-        />
-
-        <DashboardPoleReno
-          showPoleReno={showPoleReno}
-          togglePoleReno={togglePoleReno}
-          stats={poleRenoStats}
-          totalAvec={showPoleReno ? getTotalGeneral() : totalSansPoleReno + (poleRenoStats?.totalProjet || 0)}
-          totalSans={totalSansPoleReno}
-          formatMontant={formatMontant}
-        />
-
-        <div ref={printRef}>
-          <div className="print-header">
-            <h1>spatiaal — Prévisionnel Avril 2026 → Mars 2027</h1>
-            <p>SAS · Associés : Manon, Jordan, Amin</p>
-          </div>
-
-          {showAnnuel ? (
-            <AnnualTable {...sharedProps} />
-          ) : (
-            <MonthlyTable
-              {...sharedProps}
-              updateCell={updateCell}
-              applyToAllMonths={applyToAllMonths}
+        {currentPage === 'charges' ? (
+          <>
+            <SummaryCards
+              totalGeneral={getTotalGeneral()}
+              totalHorsRemun={getTotalHorsRemuneration()}
+              data={data}
+              formatMontant={formatMontant}
+              activeOptions={activeOptions}
+              toggleOption={toggleOption}
             />
-          )}
-        </div>
+
+            <DashboardPoleReno
+              showPoleReno={showPoleReno}
+              togglePoleReno={togglePoleReno}
+              stats={poleRenoStats}
+              totalAvec={showPoleReno ? getTotalGeneral() : totalSansPoleReno + (poleRenoStats?.totalProjet || 0)}
+              totalSans={totalSansPoleReno}
+              formatMontant={formatMontant}
+            />
+
+            <div ref={printRef}>
+              <div className="print-header">
+                <h1>spatiaal — Prévisionnel Avril 2026 → Mars 2027</h1>
+                <p>SAS · Associés : Manon, Jordan, Amin</p>
+              </div>
+
+              {showAnnuel ? (
+                <AnnualTable {...sharedProps} />
+              ) : (
+                <MonthlyTable
+                  {...sharedProps}
+                  updateCell={updateCell}
+                  applyToAllMonths={applyToAllMonths}
+                />
+              )}
+            </div>
+          </>
+        ) : (
+          <WoltikPage />
+        )}
       </main>
 
       <footer className="footer">

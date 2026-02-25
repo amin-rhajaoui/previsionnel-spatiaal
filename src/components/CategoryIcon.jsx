@@ -1,13 +1,15 @@
 import {
   Building2, Car, Shield, MonitorSmartphone, Cloud,
   Megaphone, FileText, Train, GraduationCap, Wallet,
-  Package, Cpu, Zap
+  Package, Cpu, Zap,
+  Smartphone, ScanLine, ShieldCheck, RefreshCw, Crown, Settings
 } from 'lucide-react'
 
 const iconMap = {
   Building2, Car, Shield, MonitorSmartphone, Cloud,
   Megaphone, FileText, Train, GraduationCap, Wallet,
-  Package, Cpu, Zap
+  Package, Cpu, Zap,
+  Smartphone, ScanLine, ShieldCheck, RefreshCw, Crown, Settings
 }
 
 export default function CategoryIcon({ name, size = 16, color }) {

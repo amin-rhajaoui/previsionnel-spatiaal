@@ -1429,3 +1429,131 @@
 .table-scroll::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+
+/* ============================================
+   NAV TABS
+   ============================================ */
+.header-nav {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: 1rem;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.nav-tab:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.nav-tab.active {
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+/* ============================================
+   THEME TOGGLE
+   ============================================ */
+.btn-theme {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.btn-theme:hover {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   ============================================ */
+[data-theme="light"] .brand-name {
+  background: linear-gradient(135deg, #1a1a2e, #52526b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .row-category-remun td {
+  background: #fef3e2 !important;
+  border-bottom-color: #fde6c4 !important;
+}
+
+[data-theme="light"] .row-category-remun:hover td {
+  background: #fde6c4 !important;
+}
+
+[data-theme="light"] .row-item-remun td {
+  background: #fffbf5 !important;
+}
+
+[data-theme="light"] .row-item-remun:hover td {
+  background: #fef3e2 !important;
+}
+
+[data-theme="light"] .row-item-remun td.sticky-col {
+  background: #fffbf5 !important;
+}
+
+[data-theme="light"] .row-item-remun:hover td.sticky-col {
+  background: #fef3e2 !important;
+}
+
+[data-theme="light"] .row-grand-total td {
+  background: linear-gradient(135deg, #e8e6ff, #d9d5ff) !important;
+  color: #1a1a2e !important;
+}
+
+[data-theme="light"] .row-grand-total td.sticky-col {
+  background: linear-gradient(135deg, #e8e6ff, #d9d5ff) !important;
+  color: #1a1a2e !important;
+}
+
+[data-theme="light"] .row-grand-total .col-total-val {
+  background: rgba(99,102,241,0.12) !important;
+  color: #4f46e5 !important;
+}
+
+[data-theme="light"] .table-scroll::-webkit-scrollbar-track {
+  background: #f5f5f7;
+}
+
+[data-theme="light"] .table-scroll::-webkit-scrollbar-thumb {
+  background: #d4d4dc;
+}
+
+[data-theme="light"] .table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #b0b0bc;
+}
+
+[data-theme="light"] .header {
+  background: rgba(255,255,255,0.85);
+}

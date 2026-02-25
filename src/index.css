@@ -60,6 +60,51 @@ body {
 
 #root { min-height: 100vh; }
 
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+[data-theme="light"] {
+  --bg: #f5f5f7;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --bg-hover: #f0f0f4;
+  --bg-input: #f8f8fb;
+
+  --surface: #eeeef2;
+  --surface-2: #e4e4ea;
+  --surface-3: #d8d8e0;
+
+  --border: #d4d4dc;
+  --border-light: #e8e8ee;
+  --border-focus: #6366f1;
+
+  --text: #1a1a2e;
+  --text-secondary: #52526b;
+  --text-muted: #8888a0;
+  --text-inverse: #ffffff;
+
+  --primary: #6366f1;
+  --primary-soft: #6366f115;
+
+  --accent-green: #059669;
+  --accent-green-soft: #05966912;
+  --accent-orange: #ea580c;
+  --accent-orange-soft: #ea580c12;
+  --accent-pink: #db2777;
+  --accent-pink-soft: #db277712;
+  --accent-purple: #9333ea;
+  --accent-purple-soft: #9333ea12;
+  --accent-cyan: #0891b2;
+  --accent-cyan-soft: #0891b212;
+  --accent-amber: #d97706;
+  --accent-amber-soft: #d9770612;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+  --shadow-glow: 0 0 20px rgba(99,102,241,0.12);
+}
+
 input[type="number"] { -moz-appearance: textfield; }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
