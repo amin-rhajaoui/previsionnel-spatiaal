@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #0f0f14;
+  --bg-elevated: #16161e;
+  --bg-card: #1c1c27;
+  --bg-hover: #22222e;
+  --bg-input: #12121a;
+
+  --surface: #1e1e2a;
+  --surface-2: #252535;
+  --surface-3: #2c2c3e;
+
+  --border: #2a2a3c;
+  --border-light: #1f1f30;
+  --border-focus: #6366f1;
+
+  --text: #e8e8f0;
+  --text-secondary: #9395a8;
+  --text-muted: #5c5e72;
+  --text-inverse: #0f0f14;
+
+  --primary: #6366f1;
+  --primary-soft: #6366f120;
+
+  --accent-green: #10b981;
+  --accent-green-soft: #10b98118;
+  --accent-orange: #f97316;
+  --accent-orange-soft: #f9731618;
+  --accent-pink: #ec4899;
+  --accent-pink-soft: #ec489918;
+  --accent-purple: #a855f7;
+  --accent-purple-soft: #a855f718;
+  --accent-cyan: #06b6d4;
+  --accent-cyan-soft: #06b6d418;
+  --accent-amber: #f59e0b;
+  --accent-amber-soft: #f59e0b18;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 20px rgba(99,102,241,0.15);
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-xs: 8px;
+  --radius-full: 100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root { min-height: 100vh; }
+
+input[type="number"] { -moz-appearance: textfield; }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; margin: 0;
+}
